@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76ee520d0594bf43bc99d5f2c11e62a, type: 3}
+  m_Name: DenemeRecipe
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 2676440859144101803, guid: 745551940c547ad418d71835290ef4d0, type: 3}
+  - {fileID: 3752473869801661151, guid: 9606c5e5cc436314c88a032580145e8d, type: 3}
+  - {fileID: 5263078379901646532, guid: 034cd7627a295164e85e1de64632a788, type: 3}
+  - {fileID: 8990635644555543757, guid: 806b2a550adf9334eb956127ac1aa2a7, type: 3}
+  - {fileID: 7922875621453169149, guid: ef2ad66775384d840985e717988844f9, type: 3}
+  - {fileID: 1985134150306302278, guid: 56ed66a2a5efe284292d94c2fd51b06c, type: 3}
+  recipeScore: 10
+  order2D: {fileID: 8968199838612988159, guid: 99c0ea01750f3b145a0174d34091d29e, type: 3}
