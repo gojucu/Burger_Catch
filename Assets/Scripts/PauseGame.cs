@@ -80,7 +80,7 @@ public class PauseGame : MonoBehaviour
 
     public void OpenOptions()
     {
-        Debug.Log("sonucilk:" + isOptions);
+        Debug.Log("sonucilk:" + isOptions);//Bunlara bak sil sonra gereksiz ise
         isOptions = !isOptions;
         Debug.Log("sonucSon:" + isOptions);
         if (isOptions == false)

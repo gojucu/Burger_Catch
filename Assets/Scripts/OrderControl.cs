@@ -246,7 +246,6 @@ public class OrderControl : MonoBehaviour
         }
 
         ingControl.DestroyIngredient();//Düşen malzemeyi yok et
-        //Debug.Log("hata sesi");
         audioSource.Stop();
         audioSource.PlayOneShot(mistake);
         GameOver.health -= 1; // Canı 1 Azalt
