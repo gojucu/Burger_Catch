@@ -19,33 +19,64 @@ MonoBehaviour:
     name: Table_0
     price: 0
     isDefault: 0
-    isPurchased: 0
+    isPurchased: 1
   - itemID: 1
     categoryID: 0
     image: {fileID: 21300022, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
     name: Table_1
     price: 500
     isDefault: 0
-    isPurchased: 0
+    isPurchased: 1
   - itemID: 0
     categoryID: 1
     image: {fileID: 21300032, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
     name: Plant_1
     price: 333
     isDefault: 0
-    isPurchased: 0
-  tempItem:
-    itemID: 0
+    isPurchased: 1
+  - itemID: 2
     categoryID: 0
-    image: {fileID: 21300004, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
-    name: Table_0
+    image: {fileID: 21300034, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+    name: Table2
+    price: 100
+    isDefault: 0
+    isPurchased: 1
+  - itemID: 1
+    categoryID: 1
+    image: {fileID: 21300010, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+    name: Plant_2
+    price: 450
+    isDefault: 0
+    isPurchased: 0
+  - itemID: 0
+    categoryID: 2
+    image: {fileID: 21300038, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+    name: wall_1
+    price: 333
+    isDefault: 0
+    isPurchased: 0
+  - itemID: 1
+    categoryID: 2
+    image: {fileID: 21300016, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+    name: Plant_1
     price: 250
     isDefault: 0
     isPurchased: 1
+  tempItem:
+    itemID: 1
+    categoryID: 1
+    image: {fileID: 21300010, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+    name: Plant_2
+    price: 450
+    isDefault: 0
+    isPurchased: 0
   categories:
   - id: 0
     name: TableChair
     selectedItemID: 0
   - id: 1
     name: Plant
+    selectedItemID: 0
+  - id: 2
+    name: Wall
     selectedItemID: 0

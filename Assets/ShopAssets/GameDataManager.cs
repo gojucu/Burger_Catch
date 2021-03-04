@@ -60,7 +60,7 @@ public static class GameDataManager
     public static void AddCoins(int amount)
     {
         playerData.coins += amount;
-        SavePlayerData();//***
+        SavePlayerData();
     }
 
     public static bool CanSpendCoins(int amount)

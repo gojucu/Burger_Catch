@@ -10,6 +10,8 @@ using System.IO;
 public class GameMenu : MonoBehaviour
 {
     public TextMeshProUGUI highScore;
+    [SerializeField] TextMeshProUGUI menuCoinsUIText;
+    [SerializeField] Text shopCoinsUIText;
 
     public Sprite MusicOffSprite;
     public Sprite MusicOnSprite;
@@ -25,6 +27,18 @@ public class GameMenu : MonoBehaviour
         music = FindObjectOfType<Music>();
         Time.timeScale = 1;
         GetHighscore();
+        UpdateAllCoinsUIText();
+    }
+    public void UpdateAllCoinsUIText()//bütün coin textlerini değiştiriyor
+    {
+        int deneme = GameDataManager.GetCoins();
+        menuCoinsUIText.text = deneme.ToString();
+        shopCoinsUIText.text = deneme.ToString();
+
+        //for (int i = 0; i < allCoinsUIText.Length; i++)
+        //{
+        //    allCoinsUIText[i].text = deneme.ToString();
+        //}
     }
     public static void DeleteSaveData()//Test için bu silinecek
     {

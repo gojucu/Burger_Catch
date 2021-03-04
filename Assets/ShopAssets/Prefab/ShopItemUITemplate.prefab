@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40.810997}
-  m_SizeDelta: {x: 81.6, y: 81.622}
+  m_AnchoredPosition: {x: 0, y: -48.557}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222383823900615352
 CanvasRenderer:
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224468999294775460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BUY
+  m_Text: OWNED
 --- !u!1 &1349744087988502
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 47.8, y: 0.00000071526}
-  m_SizeDelta: {x: 66.7, y: 21.4}
+  m_AnchoredPosition: {x: 35.26, y: 0.00000071526}
+  m_SizeDelta: {x: 41.619076, y: 21.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222916667652737002
 CanvasRenderer:
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -264,8 +264,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224468999294775460}
+  - {fileID: 224343499262285502}
   m_Father: {fileID: 224408972903697722}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -387,7 +388,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224341202048957748}
-  - {fileID: 224343499262285502}
   - {fileID: 224540770993447342}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -525,6 +525,8 @@ MonoBehaviour:
   itemID: 0
   itemImage: {fileID: 114632110332127708}
   itemPurchaseButton: {fileID: 114659037928263360}
+  buttonText: {fileID: 1006681032154484}
+  itemPrice: {fileID: 1778674964685298}
   ItemPriceText: {fileID: 114914625093162938}
   itemButton: {fileID: 5175068052814585069}
   itemOutline: {fileID: 2153065490437790506}
@@ -553,18 +555,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778674964685298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224991318098408160}
-  m_Father: {fileID: 224408972903697722}
+  m_Father: {fileID: 224540770993447342}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.5, y: -85.5}
-  m_SizeDelta: {x: 21.4, y: 21.400002}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -29.7, y: 0}
+  m_SizeDelta: {x: 21.400002, y: 21.400002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222615048494426714
 CanvasRenderer:

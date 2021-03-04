@@ -11,8 +11,13 @@ public class ItemUI : MonoBehaviour
 	[Space(20f)]
 	[SerializeField] int itemID;
 	[SerializeField] Image itemImage;
+
 	[SerializeField] Button itemPurchaseButton;
+	[SerializeField] GameObject buttonText;
+
+	[SerializeField] GameObject itemPrice;
 	[SerializeField] Text ItemPriceText;
+
 
 	[Space(20f)]
 	[SerializeField] Button itemButton;
@@ -39,7 +44,12 @@ public class ItemUI : MonoBehaviour
 	public void SetItemAsPurchased()
 	{
 		itemPurchaseButton.interactable = false;
-		itemPurchaseButton.transform.GetChild(0).GetComponent<Text>().text = "OWNED";
+
+		itemPrice.SetActive(false);
+		buttonText.SetActive(true);
+		buttonText.GetComponent<Text>().text = "OWNED";
+
+		//itemPurchaseButton.transform.GetChild(0).GetComponent<Text>().text = "OWNED";
 		itemButton.interactable = true;
 
 		//itemImage = itemNotSelectedColor;
@@ -61,6 +71,7 @@ public class ItemUI : MonoBehaviour
 	public void SelectItem()
 	{
 		itemOutline.enabled = true;
+		buttonText.GetComponent<Text>().text = "SELECTED";
 		//itemImage.color = itemSelectedColor;
 		itemButton.interactable = false;
 	}
@@ -68,6 +79,7 @@ public class ItemUI : MonoBehaviour
 	public void DeselectItem()
 	{
 		itemOutline.enabled = false;
+		buttonText.GetComponent<Text>().text = "OWNED";
 		//itemImage.color = itemNotSelectedColor;
 		itemButton.interactable = true;
 	}
