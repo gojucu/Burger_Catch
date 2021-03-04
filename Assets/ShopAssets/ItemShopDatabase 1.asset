@@ -17,29 +17,29 @@ MonoBehaviour:
     categoryID: 0
     image: {fileID: 21300004, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
     name: Table_0
-    price: 250
+    price: 0
     isDefault: 0
-    isPurchased: 1
+    isPurchased: 0
   - itemID: 1
     categoryID: 0
     image: {fileID: 21300022, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
     name: Table_1
     price: 500
     isDefault: 0
-    isPurchased: 1
+    isPurchased: 0
   - itemID: 0
     categoryID: 1
     image: {fileID: 21300032, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
     name: Plant_1
     price: 333
     isDefault: 0
-    isPurchased: 1
+    isPurchased: 0
   tempItem:
-    itemID: 1
+    itemID: 0
     categoryID: 0
-    image: {fileID: 21300022, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
-    name: Table_1
-    price: 500
+    image: {fileID: 21300004, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+    name: Table_0
+    price: 250
     isDefault: 0
     isPurchased: 1
   categories:

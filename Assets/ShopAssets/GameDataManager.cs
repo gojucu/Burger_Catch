@@ -14,7 +14,7 @@ public class CharactersShopData
 
 //Player Data Holder
 [System.Serializable]
-public class PlayerData2
+public class PlayerData2//diğer burgerın playerData ile kesiştiği için 2 koydum sonuna
 {
     public int coins = 1000;
     public List<int> selectedCharacterIndex = new List<int>();
@@ -31,7 +31,7 @@ public static class GameDataManager
     static GameDataManager()
     {
         LoadPlayerData();          
-        LoadCharactersShopData();  
+        LoadCharactersShopData();
     }
 
     //Player Data Methods -----------------------------------------------------------------------------
@@ -136,6 +136,9 @@ public static class GameDataManager
             Debug.LogError("Save file not found in" + path);
         }
     }
+
+
+
 
     static void SaveCharactersShoprData()
     {

@@ -38,7 +38,7 @@ public class Game : MonoBehaviour
 		return (Coins >= amount);
 	}
 
-	public void UpdateAllCoinsUIText ()
+	public void UpdateAllCoinsUIText ()//Anasayfada gözüken para bu.
 	{
 		int deneme = GameDataManager.GetCoins();
 		for (int i = 0; i < allCoinsUIText.Length; i++) {

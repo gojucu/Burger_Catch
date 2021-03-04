@@ -7,7 +7,7 @@ public class TabGroup : MonoBehaviour
 {
     public List<TabButton> tabButtons;
     public Sprite tabIdle;//Bunlar silinicek Yerlerine Color kullanılıcak
-    public Sprite tabHover;//
+    public Sprite tabHover;//***Hem bunları hem renkleri kullanıyorum??
     public Sprite tabActive;//
 
     [SerializeField] GameObject g=null;

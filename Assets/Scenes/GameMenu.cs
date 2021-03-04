@@ -6,6 +6,7 @@ using TMPro;
 using System;
 using UnityEngine.UI;
 
+using System.IO;
 public class GameMenu : MonoBehaviour
 {
     public TextMeshProUGUI highScore;
@@ -24,6 +25,19 @@ public class GameMenu : MonoBehaviour
         music = FindObjectOfType<Music>();
         Time.timeScale = 1;
         GetHighscore();
+    }
+    public static void DeleteSaveData()//Test için bu silinecek
+    {
+        string path = Application.persistentDataPath + "/shop.dat";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        string path2 = Application.persistentDataPath + "/player.dat";
+        if (File.Exists(path2))
+        {
+            File.Delete(path2);
+        }
     }
     void Update()
     {

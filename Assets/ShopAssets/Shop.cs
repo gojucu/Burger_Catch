@@ -30,11 +30,6 @@ public class Shop : MonoBehaviour
 	[SerializeField] Transform ShopScrollView;
 	[SerializeField] GameObject ShopPanel;
 
-
-    void Start ()
-	{
-
-	}
 	public void ListShopItems(int catID)
     {
 		//Loop throw save purchased items and make them as purchased in the Database array
@@ -61,6 +56,9 @@ public class Shop : MonoBehaviour
 			{
 				itemUI.SetItemAsPurchased();
 				itemUI.OnItemSelect(item.itemID, catID, OnItemSelected);
+			}else if (item.itemID == 0)//Burası test edilecek
+            {
+				itemUI.SetItemAsPurchased();
 			}
 			else
 			{
@@ -74,6 +72,7 @@ public class Shop : MonoBehaviour
 		//Select UI item
 		SelectItemUI(selectedItemID, catID);
 	}
+
 
     void SetSelectedItems(int selectedItemID,int categoryID)
     {
@@ -141,16 +140,17 @@ public class Shop : MonoBehaviour
             }
 
             //Add purchased item to Shop Data
-			for(int i =0; i < itemDB.items.Length;i++)
+			for(int i =0; i < itemDB.items.Length;i++)// Sorun burada. Bütün eşyaları satın alıyor Bir kere çalışsın!!!****
             {
-				ShopItem item = itemDB.GetShopItem(itemID, catID);
+				//ShopItem item = itemDB.GetShopItem(itemID, catID);
+				ShopItem item = itemDB.items[i];
                 if (item.itemID == itemID && item.categoryID == catID)
                 {
 					GameDataManager.AddPurchasedCharacter(i);//Burdan itemDB.items daki itemin indexini yolluyor
 				}
 			}
 			//change UI text: coins
-			Game.Instance.UpdateAllCoinsUIText();
+			//Game.Instance.UpdateAllCoinsUIText(); Ana menüdeki parayı güncelliyor
 		}
         else
         {
@@ -177,6 +177,7 @@ public class Shop : MonoBehaviour
 		ShopPanel.SetActive (false);
 
 		ResetShopList();
+
 	}
 
 }
