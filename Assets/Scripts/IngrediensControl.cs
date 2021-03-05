@@ -39,7 +39,7 @@ public class IngrediensControl : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)//*** Tagları compare ile yapıcakmışız galiba dene herşey bitince
     {
         if (collider.gameObject.tag == "DestroyFood")//Sahne dışına çıkan malzemeleri yok etmek için
         {

@@ -4,12 +4,10 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 //Shop Data Holder
 [System.Serializable]
-public class CharactersShopData
+public class CharactersShopDatax
 {
     public List<int> purchasedCharactersIndexes = new List<int>();
-
-    public int categoryCount;
-
+    //public int categoryCount;
 }
 
 //Player Data Holder
@@ -25,7 +23,7 @@ public class PlayerData2//diğer burgerın playerData ile kesiştiği için 2 ko
 public static class GameDataManager
 {
     static PlayerData2 playerData = new PlayerData2();
-    static CharactersShopData charactersShopData = new CharactersShopData();
+    static CharactersShopDatax charactersShopData = new CharactersShopDatax();
 
     //static ShopItemDatabase itemDB;
     static GameDataManager()
@@ -128,7 +126,7 @@ public static class GameDataManager
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            charactersShopData = formatter.Deserialize(stream) as CharactersShopData;
+            charactersShopData = formatter.Deserialize(stream) as CharactersShopDatax;
             stream.Close();
         }
         else

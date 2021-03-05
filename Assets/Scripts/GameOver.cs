@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI score, highScore;
     public GameObject health1, health2, health3, gameOverPanel, gameUi;
     public static int health;
+    public bool isDead;
 
     ScoreBoard scoreBoard;
 
@@ -26,7 +27,10 @@ public class GameOver : MonoBehaviour
     {
         if (health > 3)
             health = 3;
-
+        if (isDead == true)
+        {
+            return;
+        }
         switch (health)
         {
             case 3:
@@ -51,17 +55,18 @@ public class GameOver : MonoBehaviour
                 GameOverActive();
                 break;
         }
+
     }
 
-    private void GameOverActive()
+    private void GameOverActive()///*** Bunun sonunda score u para olarak varsayıp SaveSystemden addcoin filan diyebilirsin
     {
         //Higscore getir ***Belki bunu ayrı fonksiyon yaparsın
         if (scoreBoard.GetScore() > scoreBoard.highScore)
         {
-            //PlayerPrefs.SetInt("HighScore", scoreBoard.GetScore()); silinicek**
-
             scoreBoard.highScore = scoreBoard.GetScore();
-            SaveSystem.SavePlayer(scoreBoard);
+
+            SaveSystem.SetHighScore(scoreBoard.GetScore());//**yeni
+            //SaveSystem.SavePlayer(scoreBoard);// Bunu set score yapıcakın
             highScore.text = scoreBoard.GetScore().ToString();
         }
         else
@@ -69,6 +74,8 @@ public class GameOver : MonoBehaviour
             highScore.text = scoreBoard.highScore.ToString();
         }
         score.text = scoreBoard.GetScore().ToString();//Yeni score
+        SaveSystem.AddCoins(scoreBoard.GetScore());
+        isDead = true;
 
         gameUi.SetActive(false);
         gameOverPanel.SetActive(true);

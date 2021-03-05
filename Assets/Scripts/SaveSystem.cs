@@ -1,38 +1,182 @@
 ﻿using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.Generic;
+//Shop Data Holder
+[System.Serializable]
+public class CharactersShopData
+{
+    public List<int> purchasedCharactersIndexes = new List<int>();
+    //public int categoryCount;//bu lazım değil gibi sil sonra
+}
+
+//Player Data Holder
+[System.Serializable]
+public class PlayerData//diğer burgerın playerData ile kesiştiği için 2 koydum sonuna
+{
+    public int highScore=0;
+    public int coins = 1000;//Bu sayıyı 0 yap testler bitince buildden önce
+
+    public List<int> selectedCharacterIndex = new List<int>();
+    public ItemCategories[] itemCats = new ItemCategories[10];//Bu 10 u elinle manuel ayarlamak zorunda olabilirsin ****
+}
 
 public static class SaveSystem
 {
-    public static void SavePlayer(ScoreBoard scoreBoard)
+    static PlayerData playerData = new PlayerData();
+    static CharactersShopData charactersShopData = new CharactersShopData();
+
+
+    static SaveSystem()
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.fun";//fun bana bağlı istediğim uzantıyı girebilirim.
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        PlayerData data = new PlayerData(scoreBoard);
-
-        formatter.Serialize(stream, data);
-        stream.Close();
+        LoadPlayerData();
+        LoadCharactersShopData();
+        Debug.Log("hey hey");
     }
 
-    public static PlayerData LoadPlayer()
+    //Player Data Methods -----------------------------------------------------------------------------
+    public static int GetHighScore()//**Yeni
     {
-        string path = Application.persistentDataPath + "/player.fun";
+        return playerData.highScore;
+    }
+    public static void SetHighScore(int highScore)//**Yeni
+    {
+        playerData.highScore = highScore;
+        SavePlayerData();
+    }
+
+    public static int GetSelectedItemIndex(int catID)//****** BU kullanman gereken
+    {
+        return playerData.itemCats[catID].selectedItemID;
+    }
+
+    public static void SetSelectedItem(int itemID, int catID)
+    {
+        playerData.itemCats[catID].selectedItemID = itemID;
+        SavePlayerData();
+    }
+    public static int GetSelectedItemsCount()//Bune 
+    {
+        return playerData.selectedCharacterIndex.Count;
+    }
+    public static int GetCoins()
+    {
+        return playerData.coins;
+    }
+    public static void AddCoins(int amount)
+    {
+        playerData.coins += amount;
+        SavePlayerData();
+    }
+    public static bool CanSpendCoins(int amount)
+    {
+        return (playerData.coins >= amount);
+    }
+    public static void SpendCoins(int amount)
+    {
+        playerData.coins -= amount;
+        SavePlayerData();
+    }
+    static void LoadPlayerData()
+    {
+        string path = Application.persistentDataPath + "/players.dat";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
+            playerData = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
-
-            return data;
         }
         else
         {
-            Debug.LogError("Save file not found in " + path);
-            return null;
+            Debug.LogError("Save file not found in" + path);
         }
+    }
+    static void SavePlayerData()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/players.dat";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        formatter.Serialize(stream, playerData);
+        stream.Close();
+
+    }
+    //public static void SavePlayer(ScoreBoard scoreBoard)
+    //{
+    //    BinaryFormatter formatter = new BinaryFormatter();
+    //    string path = Application.persistentDataPath + "/player.fun";//fun bana bağlı istediğim uzantıyı girebilirim.
+    //    FileStream stream = new FileStream(path, FileMode.Create);
+
+    //    PlayerData data = new PlayerData(scoreBoard);
+
+    //    formatter.Serialize(stream, data);
+    //    stream.Close();
+    //}
+
+    //public static PlayerData LoadPlayer()
+    //{
+    //    string path = Application.persistentDataPath + "/player.fun";
+    //    if (File.Exists(path))
+    //    {
+    //        BinaryFormatter formatter = new BinaryFormatter();
+    //        FileStream stream = new FileStream(path, FileMode.Open);
+
+    //        PlayerData data = formatter.Deserialize(stream) as PlayerData;
+    //        stream.Close();
+
+    //        return data;
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("Save file not found in " + path);
+    //        return null;
+    //    }
+    //}
+
+    //Characters Shop Data Methods -----------------------------------------------------------------------------
+    public static void AddPurchasedCharacter(int characterIndex)
+    {
+        charactersShopData.purchasedCharactersIndexes.Add(characterIndex);
+        SaveCharactersShoprData();
+    }
+
+    public static List<int> GetAllPurchasedCharacter()
+    {
+        return charactersShopData.purchasedCharactersIndexes;
+    }
+
+
+    public static int GetPurchasedCharacter(int index)
+    {
+        return charactersShopData.purchasedCharactersIndexes[index];
+    }
+
+    static void LoadCharactersShopData()
+    {
+        string path = Application.persistentDataPath + "/shops.dat";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            charactersShopData = formatter.Deserialize(stream) as CharactersShopData;
+            stream.Close();
+        }
+        else
+        {
+            Debug.LogError("Save file not found in" + path);
+        }
+    }
+
+    static void SaveCharactersShoprData()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/shops.dat";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        formatter.Serialize(stream, charactersShopData);
+        stream.Close();
     }
 }

@@ -33,9 +33,9 @@ public class Shop : MonoBehaviour
 	public void ListShopItems(int catID)
     {
 		//Loop throw save purchased items and make them as purchased in the Database array
-		for (int i = 0; i < GameDataManager.GetAllPurchasedCharacter().Count; i++)
+		for (int i = 0; i < SaveSystem.GetAllPurchasedCharacter().Count; i++)
 		{
-			int purchasedCharacterIndex = GameDataManager.GetPurchasedCharacter(i);
+			int purchasedCharacterIndex = SaveSystem.GetPurchasedCharacter(i);
 			ShopItem shopItem = itemDB.items[i];
 			itemDB.PurchaseItem(shopItem.itemID,shopItem.categoryID);
 		}
@@ -66,7 +66,7 @@ public class Shop : MonoBehaviour
 			}
 
 		}
-		int selectedItemID = GameDataManager.GetSelectedItemIndex(catID);
+		int selectedItemID = SaveSystem.GetSelectedItemIndex(catID);
 		//Set selected items in DataManager
 		SetSelectedItems(selectedItemID, catID);
 		//Select UI item
@@ -77,7 +77,7 @@ public class Shop : MonoBehaviour
     void SetSelectedItems(int selectedItemID,int categoryID)
     {
 		//Set selected character
-		GameDataManager.SetSelectedItem(selectedItemID, categoryID);
+		SaveSystem.SetSelectedItem(selectedItemID, categoryID);
     }
 
 
@@ -87,7 +87,7 @@ public class Shop : MonoBehaviour
 		SelectItemUI(i,catID);
 
 		//Save Data
-		GameDataManager.SetSelectedItem(i,catID);
+		SaveSystem.SetSelectedItem(i,catID);
 	}
 
 	void SelectItemUI(int selectedID,int catID)//Cat id kullanılmıyor gözüküyor temizle
@@ -121,10 +121,10 @@ public class Shop : MonoBehaviour
 	{
 		int price = itemDB.items.Where(x => x.itemID == itemID && x.categoryID == catID).FirstOrDefault().price;
 
-        if (GameDataManager.CanSpendCoins(price))
+        if (SaveSystem.CanSpendCoins(price))
         {
 			//Proceed with the purchase operation
-			GameDataManager.SpendCoins(price);
+			SaveSystem.SpendCoins(price);
 
 			//Update DB's Data
 			itemDB.PurchaseItem(itemID,catID);
@@ -146,10 +146,12 @@ public class Shop : MonoBehaviour
 				ShopItem item = itemDB.items[i];
                 if (item.itemID == itemID && item.categoryID == catID)
                 {
-					GameDataManager.AddPurchasedCharacter(i);//Burdan itemDB.items daki itemin indexini yolluyor
+					SaveSystem.AddPurchasedCharacter(i);//Burdan itemDB.items daki itemin indexini yolluyor
 				}
 			}
 			//change UI text: coins
+			GameMenu gameMenu = FindObjectOfType<GameMenu>();
+			gameMenu.UpdateAllCoinsUIText();
 			//Game.Instance.UpdateAllCoinsUIText(); Ana menüdeki parayı güncelliyor
 		}
         else

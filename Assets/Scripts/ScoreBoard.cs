@@ -22,11 +22,13 @@ public class ScoreBoard : MonoBehaviour
 
     private void LoadHighScore()
     {
-        PlayerData data = SaveSystem.LoadPlayer();
-        if (data != null)
-        {
-            highScore = data.highScore;
-        }
+        highScore = SaveSystem.GetHighScore();//**yeni
+
+        //PlayerData data = SaveSystem.LoadPlayer();
+        //if (data != null)
+        //{
+            //highScore = data.highScore;
+        //}
     }
 
     public void AddScore(int scoreIncrease)
