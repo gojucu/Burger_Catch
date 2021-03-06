@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc223d059ded4954484fab695f0e8604, type: 3}
+  m_Name: Flower Pot 1 Config
+  m_EditorClassIdentifier: 
+  placeTransform: {fileID: 3673829063895569123, guid: 88084164227be9e4980d404596af0686, type: 3}
+  itemPrefab: {fileID: 8348272343947288160, guid: 0daf96c63379e3a44a39139aad7c211e, type: 3}

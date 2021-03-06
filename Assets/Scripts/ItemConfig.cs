@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = ("Item"))]
+[CreateAssetMenu(menuName = ("Shopping/Item Config"))]
 public class ItemConfig : ScriptableObject
 {
     public Transform placeTransform;

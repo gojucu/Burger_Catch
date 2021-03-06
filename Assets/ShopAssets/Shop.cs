@@ -30,19 +30,32 @@ public class Shop : MonoBehaviour
 	[SerializeField] Transform ShopScrollView;
 	[SerializeField] GameObject ShopPanel;
 
-	public void ListShopItems(int catID)
+
+    public void ListShopItems(int catID)
     {
 		//Loop throw save purchased items and make them as purchased in the Database array
 		for (int i = 0; i < SaveSystem.GetAllPurchasedCharacter().Count; i++)
 		{
-			int purchasedCharacterIndex = SaveSystem.GetPurchasedCharacter(i);
-			ShopItem shopItem = itemDB.items[i];
-			itemDB.PurchaseItem(shopItem.itemID,shopItem.categoryID);
+            List<int> hey = new List<int>//add yerine bunu önerdi solda yaptım 
+            {
+                SaveSystem.GetPurchasedCharacter(i)
+            };
+            for (int x = 0; x < hey.Count; x++)
+            {
+                int h = hey[x];
+                ShopItem shopItem1 = itemDB.items[h];
+                if (shopItem1.itemCategory.id == catID) { 
+					itemDB.PurchaseItem(shopItem1.itemID, shopItem1.itemCategory.id);
+				}
+			}
+			//int purchasedCharacterIndex = SaveSystem.GetPurchasedCharacter(i);
+			//ShopItem shopItem = itemDB.items[i];
+			//itemDB.PurchaseItem(shopItem.itemID,shopItem.itemCategory.id);
 		}
 
 		ResetShopList();//Bu hala lazımmı ?*** lazım gibi
 		int len;
-		len = itemDB.items.Where(x => x.categoryID == catID).Count();
+		len = itemDB.items.Where(x => x.itemCategory.id == catID).Count();
 
 		for (int i = 0; i < len; i++)
 		{
@@ -56,9 +69,10 @@ public class Shop : MonoBehaviour
 			{
 				itemUI.SetItemAsPurchased();
 				itemUI.OnItemSelect(item.itemID, catID, OnItemSelected);
-			}else if (item.itemID == 0)//Burası test edilecek
+			}else if (item.itemID == 0&&item.isPurchased==false)//Burası test edilecek
             {
 				itemUI.SetItemAsPurchased();
+				OnItemPurchased(item.itemID, item.itemCategory.id);
 			}
 			else
 			{
@@ -119,7 +133,15 @@ public class Shop : MonoBehaviour
 
 	void OnItemPurchased (int itemID,int catID)
 	{
-		int price = itemDB.items.Where(x => x.itemID == itemID && x.categoryID == catID).FirstOrDefault().price;
+		int price;
+        if (itemID == 0)
+        {
+			price = 0;
+        }
+        else
+        {
+			price = itemDB.items.Where(x => x.itemID == itemID && x.itemCategory.id == catID).FirstOrDefault().price;
+		}
 
         if (SaveSystem.CanSpendCoins(price))
         {
@@ -144,7 +166,7 @@ public class Shop : MonoBehaviour
             {
 				//ShopItem item = itemDB.GetShopItem(itemID, catID);
 				ShopItem item = itemDB.items[i];
-                if (item.itemID == itemID && item.categoryID == catID)
+                if (item.itemID == itemID && item.itemCategory.id == catID)
                 {
 					SaveSystem.AddPurchasedCharacter(i);//Burdan itemDB.items daki itemin indexini yolluyor
 				}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efb127e78ac12479f5694678c45ce3, type: 3}
+  m_Name: Table 0 Shop Config
+  m_EditorClassIdentifier: 
+  itemID: 0
+  itemCategory: {fileID: 11400000, guid: 459ff91c232c9124ebf6afc8d07c1371, type: 2}
+  image: {fileID: 21300038, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+  name: Table_0
+  price: 0
+  itemConfig: {fileID: 11400000, guid: a3914a4bb6b0e994aa5070eb92df2900, type: 2}
+  isPurchased: 0

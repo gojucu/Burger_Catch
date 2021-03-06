@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc223d059ded4954484fab695f0e8604, type: 3}
-  m_Name: Flower Pot 1
+  m_Script: {fileID: 11500000, guid: 371c6b2e4da8b2546be7bad08d41b25d, type: 3}
+  m_Name: Walls
   m_EditorClassIdentifier: 
-  placeTransform: {fileID: 3673829063895569123, guid: bd049311c400f374383c9877d27e6612, type: 3}
-  itemPrefab: {fileID: 4461986705628742289, guid: 4f46d38ef63fb5c4096a6a312585adee, type: 3}
+  id: 2
+  name: Walls
+  selectedItemID: 0

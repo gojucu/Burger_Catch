@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fc2b5017be4534b8ff9e214751fb37, type: 3}
+  m_Name: ItemShopDatabase 1
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 0583b752117becd46b495605d4ce4f19, type: 2}
+  - {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
+  - {fileID: 11400000, guid: 23ab440343af00f47a847156f2605cd8, type: 2}
+  - {fileID: 11400000, guid: 9aa9b23bd6002624aa6453ccfe9ad6c8, type: 2}
+  - {fileID: 11400000, guid: 0ce26d63ae5cded47bd076b0463861e6, type: 2}
+  tempItem: {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
+  categories:
+  - id: 0
+    name: Tables
+    selectedItemID: 0
+  - id: 1
+    name: Plants
+    selectedItemID: 0
+  - id: 0
+    name: Walls
+    selectedItemID: 0

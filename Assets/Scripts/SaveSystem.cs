@@ -17,8 +17,9 @@ public class PlayerData//diğer burgerın playerData ile kesiştiği için 2 koy
     public int highScore=0;
     public int coins = 1000;//Bu sayıyı 0 yap testler bitince buildden önce
 
-    public List<int> selectedCharacterIndex = new List<int>();
+    public List<int> selectedCharacterIndex = new List<int>();//Bunu Kullanmıyosun
     public ItemCategories[] itemCats = new ItemCategories[10];//Bu 10 u elinle manuel ayarlamak zorunda olabilirsin ****
+
 }
 
 public static class SaveSystem
@@ -29,6 +30,7 @@ public static class SaveSystem
 
     static SaveSystem()
     {
+        
         LoadPlayerData();
         LoadCharactersShopData();
         Debug.Log("hey hey");
@@ -47,7 +49,9 @@ public static class SaveSystem
 
     public static int GetSelectedItemIndex(int catID)//****** BU kullanman gereken
     {
+        //return playerData.itemCats[catID].selectedItemID;
         return playerData.itemCats[catID].selectedItemID;
+
     }
 
     public static void SetSelectedItem(int itemID, int catID)

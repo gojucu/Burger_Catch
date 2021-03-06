@@ -26,7 +26,7 @@ public class ShopItemDatabase : ScriptableObject
         for (int i = 0; i < items.Length; i++)
         {
             ShopItem shopItem = items[i];
-            if (shopItem.categoryID == catID && shopItem.itemID == index)
+            if (shopItem.itemCategory.id == catID && shopItem.itemID == index)
             {
                 tempItem = shopItem;
             }
@@ -43,7 +43,7 @@ public class ShopItemDatabase : ScriptableObject
         for (int i = 0; i < items.Length; i++)
         {
             ShopItem shopItem1 = items[i];
-            if (shopItem1.itemID == id && shopItem1.categoryID == catID)
+            if (shopItem1.itemID == id && shopItem1.itemCategory.id == catID)
             {
                 items[i].isPurchased = true;
             }
