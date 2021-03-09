@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc223d059ded4954484fab695f0e8604, type: 3}
   m_Name: Flower Pot 2 Config
   m_EditorClassIdentifier: 
-  placeTransform: {fileID: 3673829063895569123, guid: 88084164227be9e4980d404596af0686, type: 3}
-  itemPrefab: {fileID: 8348272343947288160, guid: 0daf96c63379e3a44a39139aad7c211e, type: 3}
+  placeTransform: {fileID: 3673829063895569123, guid: 17e46222fb577194b901e7ec323ed84f, type: 3}
+  itemPrefab: {fileID: 3067701149227607410, guid: 27ab3a1018a279a43a16246176d5c0a1, type: 3}

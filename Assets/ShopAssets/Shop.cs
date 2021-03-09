@@ -1,12 +1,10 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
-using System;
+﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-	#region Singlton:Shop
+	#region Singleton:Shop
 
 	public static Shop Instance;
 

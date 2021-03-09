@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc223d059ded4954484fab695f0e8604, type: 3}
-  m_Name: Table 0 Config
+  m_Name: Table 1 Config
   m_EditorClassIdentifier: 
-  placeTransform: {fileID: 1280125265219577050, guid: 8a5565d3ccc35024fb7aac31e2ad780c, type: 3}
-  itemPrefab: {fileID: 6738236352795657980, guid: 74e526bbab8a2bc4c8162952ac9ebf53, type: 3}
+  placeTransform: {fileID: 5407715865809239134, guid: 526176b2cde13fe479730cd95b70077d, type: 3}
+  itemPrefab: {fileID: 5162259856148618569, guid: 8ed6c0bcc834cb247b4f229545bd1b8c, type: 3}

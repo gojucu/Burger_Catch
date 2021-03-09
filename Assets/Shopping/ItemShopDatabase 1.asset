@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: ItemShopDatabase 1
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: 0583b752117becd46b495605d4ce4f19, type: 2}
-  - {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
   - {fileID: 11400000, guid: 23ab440343af00f47a847156f2605cd8, type: 2}
   - {fileID: 11400000, guid: 9aa9b23bd6002624aa6453ccfe9ad6c8, type: 2}
   - {fileID: 11400000, guid: 0ce26d63ae5cded47bd076b0463861e6, type: 2}
-  tempItem: {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
+  - {fileID: 11400000, guid: 441d3863c712bf6469f0ea9e81d07837, type: 2}
+  - {fileID: 11400000, guid: f599d92ec9aebd8479531ac017dcb930, type: 2}
+  - {fileID: 11400000, guid: 7ef9cd25438e57a4d833fecec3829704, type: 2}
+  - {fileID: 11400000, guid: 0583b752117becd46b495605d4ce4f19, type: 2}
+  - {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
+  tempItem: {fileID: 11400000, guid: 441d3863c712bf6469f0ea9e81d07837, type: 2}
   categories:
   - id: 0
     name: Tables
@@ -26,6 +29,6 @@ MonoBehaviour:
   - id: 1
     name: Plants
     selectedItemID: 0
-  - id: 0
+  - id: 2
     name: Walls
     selectedItemID: 0
