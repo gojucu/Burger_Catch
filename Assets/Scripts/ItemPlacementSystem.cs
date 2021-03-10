@@ -7,7 +7,7 @@ public class ItemPlacementSystem : MonoBehaviour
 {
     //Her kategori için bunu ayrı yazmam gerekebilir** Plantla başla örneğe
     [SerializeField] ItemConfig currentItemConfig = null;//Plant olucak ilk**Bu şekilde çalıştırdım hepsine gerek varmı düşün
-
+    [SerializeField] GameObject plate;
     [SerializeField] ShopItemDatabase itemDB;
     GameObject itemObject;
 
@@ -21,12 +21,30 @@ public class ItemPlacementSystem : MonoBehaviour
             {
                 if (shopItem.itemCategory.id == i && shopItem.itemID == selectedItemID && shopItem.itemConfig != null)
                 {
-                    currentItemConfig = shopItem.itemConfig;
+                    if (shopItem.itemCategory.name != "Plate")
+                    {
+                        currentItemConfig = shopItem.itemConfig;
 
-                    PutItemInPosition(currentItemConfig);
+                        PutItemInPosition(currentItemConfig);
+                    }
+                    else
+                    {
+                        currentItemConfig = shopItem.itemConfig;
+                        PutPlateInPosition(currentItemConfig);
+                    }
+
                 }
             }
         }
+    }
+
+    private void PutPlateInPosition(ItemConfig plateToPlace)
+    {
+        currentItemConfig = plateToPlace;
+        var platePrefab = currentItemConfig.GetItemPrefab();
+        itemObject = Instantiate(platePrefab, plate.transform);
+        itemObject.transform.localPosition = currentItemConfig.placeTransform.localPosition;
+        itemObject.transform.localRotation = currentItemConfig.placeTransform.localRotation;
     }
 
     public void PutItemInPosition(ItemConfig itemToPlace)

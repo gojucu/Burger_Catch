@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75efb127e78ac12479f5694678c45ce3, type: 3}
-  m_Name: Flower Pot 3 Shop Config
+  m_Name: Flower Pot 4 Shop Config
   m_EditorClassIdentifier: 
-  itemID: 3
+  itemID: 4
   itemCategory: {fileID: 11400000, guid: 0ce73ece9b7f44e40a2333bd4b2a2dd5, type: 2}
-  image: {fileID: 21300000, guid: 475fe0d355404cd4b921d8e184a0f398, type: 3}
-  name: Plant_3
-  price: 300
-  itemConfig: {fileID: 11400000, guid: 82d671d0d3b907949ae871191b7b0ab5, type: 2}
+  image: {fileID: 21300000, guid: 734dc54561ad349418a46d41d456020c, type: 3}
+  name: Plant_4
+  price: 350
+  itemConfig: {fileID: 11400000, guid: 0867ab73f1ce56646947045d04984b3d, type: 2}
   isPurchased: 0

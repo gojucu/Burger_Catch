@@ -16,11 +16,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 23ab440343af00f47a847156f2605cd8, type: 2}
   - {fileID: 11400000, guid: 9aa9b23bd6002624aa6453ccfe9ad6c8, type: 2}
   - {fileID: 11400000, guid: 0ce26d63ae5cded47bd076b0463861e6, type: 2}
-  - {fileID: 11400000, guid: 441d3863c712bf6469f0ea9e81d07837, type: 2}
-  - {fileID: 11400000, guid: f599d92ec9aebd8479531ac017dcb930, type: 2}
-  - {fileID: 11400000, guid: 7ef9cd25438e57a4d833fecec3829704, type: 2}
+  - {fileID: 11400000, guid: ae1278a4d9a27ed4f953ebf9b090a14c, type: 2}
+  - {fileID: 11400000, guid: 33c2990343e4520429abf4f16a911211, type: 2}
+  - {fileID: 11400000, guid: 7d8e9b1af77b79448926e02334711cd8, type: 2}
   - {fileID: 11400000, guid: 0583b752117becd46b495605d4ce4f19, type: 2}
   - {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
+  - {fileID: 11400000, guid: 1b961fb0a35a7b140ba023ddb79a8c73, type: 2}
+  - {fileID: 11400000, guid: 5523fdf6628ea95459d90012f280ccfe, type: 2}
+  - {fileID: 11400000, guid: c11ed2883332b3444a0285e43c8d56a7, type: 2}
+  - {fileID: 11400000, guid: da2a7c048ac3df64d8057e21d7989ce3, type: 2}
   tempItem: {fileID: 11400000, guid: 441d3863c712bf6469f0ea9e81d07837, type: 2}
   categories:
   - id: 0
@@ -30,5 +34,8 @@ MonoBehaviour:
     name: Plants
     selectedItemID: 0
   - id: 2
+    name: Plate
+    selectedItemID: 0
+  - id: 3
     name: Walls
     selectedItemID: 0
