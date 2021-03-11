@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75efb127e78ac12479f5694678c45ce3, type: 3}
-  m_Name: New Shop Item 1
+  m_Name: Counter 0 Shop Config
   m_EditorClassIdentifier: 
-  itemID: 3
-  itemCategory: {fileID: 11400000, guid: 459ff91c232c9124ebf6afc8d07c1371, type: 2}
-  image: {fileID: 21300000, guid: d01a013c6d7e0874fa70e5c2cde92a94, type: 3}
-  name: p3
-  price: 50
-  itemConfig: {fileID: 11400000, guid: 72570c4fb97cd1e4a9525c5fe9b00681, type: 2}
+  itemID: 0
+  itemCategory: {fileID: 0}
+  image: {fileID: 0}
+  name: 
+  price: 0
+  itemConfig: {fileID: 0}
   isPurchased: 0

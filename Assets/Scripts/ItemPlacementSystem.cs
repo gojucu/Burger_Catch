@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class ItemPlacementSystem : MonoBehaviour
 {
-    //Her kategori için bunu ayrı yazmam gerekebilir** Plantla başla örneğe
-    [SerializeField] ItemConfig currentItemConfig = null;//Plant olucak ilk**Bu şekilde çalıştırdım hepsine gerek varmı düşün
+    ItemConfig currentItemConfig = null;
     [SerializeField] GameObject plate;
     [SerializeField] ShopItemDatabase itemDB;
     GameObject itemObject;

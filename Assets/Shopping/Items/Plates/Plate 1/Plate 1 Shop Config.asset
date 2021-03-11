@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75efb127e78ac12479f5694678c45ce3, type: 3}
-  m_Name: New Shop Item 2
+  m_Name: Plate 1 Shop Config
   m_EditorClassIdentifier: 
-  itemID: 2
-  itemCategory: {fileID: 11400000, guid: 459ff91c232c9124ebf6afc8d07c1371, type: 2}
-  image: {fileID: 21300000, guid: b7e3be42e2c32d241907ea35ae72f35a, type: 3}
-  name: p3
-  price: 50
-  itemConfig: {fileID: 11400000, guid: 72570c4fb97cd1e4a9525c5fe9b00681, type: 2}
+  itemID: 1
+  itemCategory: {fileID: 11400000, guid: 46ad041d351d0074a91536b7f49bfa85, type: 2}
+  image: {fileID: 21300000, guid: 9eaf57e02ed290344a9f454bba066026, type: 3}
+  name: Plate_1
+  price: 500
+  itemConfig: {fileID: 11400000, guid: 1291e45a5fc8ea149aa226d1c9028056, type: 2}
   isPurchased: 0
