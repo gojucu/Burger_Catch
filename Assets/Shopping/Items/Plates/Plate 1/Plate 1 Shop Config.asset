@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 1
   itemCategory: {fileID: 11400000, guid: 46ad041d351d0074a91536b7f49bfa85, type: 2}
   image: {fileID: 21300000, guid: 9eaf57e02ed290344a9f454bba066026, type: 3}
-  name: Plate_1
+  itemName: Plate_1
   price: 500
   itemConfig: {fileID: 11400000, guid: 1291e45a5fc8ea149aa226d1c9028056, type: 2}
   isPurchased: 0

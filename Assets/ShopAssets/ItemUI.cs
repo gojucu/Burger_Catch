@@ -10,19 +10,19 @@ public class ItemUI : MonoBehaviour
 
 	[Space(20f)]
 	[SerializeField] int itemID;
-	[SerializeField] Image itemImage;
+	[SerializeField] Image itemImage = null;
 
-	[SerializeField] Button itemPurchaseButton;
-	[SerializeField] GameObject buttonText;
+	[SerializeField] Button itemPurchaseButton = null;
+	[SerializeField] GameObject buttonText = null;
 
-	[SerializeField] GameObject itemPrice;
-	[SerializeField] Text ItemPriceText;
+	[SerializeField] GameObject itemPrice = null;
+    [SerializeField] Text ItemPriceText = null;
 
 
 	[Space(20f)]
-	[SerializeField] Button itemButton;
+	[SerializeField] Button itemButton = null;
 	//[SerializeField] Image itemImage;
-	[SerializeField] Outline itemOutline;
+	[SerializeField] Outline itemOutline = null;
 
 	public void SetItemImage(Sprite sprite)
 	{

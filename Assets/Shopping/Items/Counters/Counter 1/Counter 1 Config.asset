@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc223d059ded4954484fab695f0e8604, type: 3}
   m_Name: Counter 1 Config
   m_EditorClassIdentifier: 
-  placeTransform: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  placeTransform: {fileID: 8882548957986471495, guid: eddcbe6adc5282b48a7a268414442f0f, type: 3}
+  itemPrefab: {fileID: 4017872975832733735, guid: b3ca799b256aa304c8cd6d1387e45fc5, type: 3}

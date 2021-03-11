@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 4
   itemCategory: {fileID: 11400000, guid: 459ff91c232c9124ebf6afc8d07c1371, type: 2}
   image: {fileID: 21300000, guid: cb13c4cdef80a884d974c3f71c693d60, type: 3}
-  name: Table_4
+  itemName: Table_4
   price: 300
   itemConfig: {fileID: 11400000, guid: 7ed6100a92ba18540a5d79c851b19439, type: 2}
   isPurchased: 0

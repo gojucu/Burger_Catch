@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc223d059ded4954484fab695f0e8604, type: 3}
   m_Name: Plate 2 Config
   m_EditorClassIdentifier: 
-  placeTransform: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  placeTransform: {fileID: 6088642989979333137, guid: 8da24c5de58b0a049bd01f300b941e2a, type: 3}
+  itemPrefab: {fileID: 2555840626579188350, guid: af112b3959ad1c640b502457bc611218, type: 3}

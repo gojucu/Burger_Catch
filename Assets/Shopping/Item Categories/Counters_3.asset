@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 371c6b2e4da8b2546be7bad08d41b25d, type: 3}
-  m_Name: Walls_3
+  m_Name: Counters_3
   m_EditorClassIdentifier: 
   id: 3
-  name: Walls
+  categoryName: Counters
   selectedItemID: 0

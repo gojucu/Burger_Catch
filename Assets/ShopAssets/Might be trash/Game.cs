@@ -19,7 +19,7 @@ public class Game : MonoBehaviour
 
 	#endregion
 
-	[SerializeField] Text[] allCoinsUIText;
+	[SerializeField] Text[] allCoinsUIText = null;
 
 	public int Coins;
 

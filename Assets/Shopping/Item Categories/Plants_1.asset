@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Plants_1
   m_EditorClassIdentifier: 
   id: 1
-  name: Plants
+  categoryName: Plants
   selectedItemID: 0

@@ -13,19 +13,27 @@ MonoBehaviour:
   m_Name: ItemShopDatabase 1
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 11400000, guid: 9b2ed3cb9f3403045ba982d026d59a47, type: 2}
+  - {fileID: 11400000, guid: a91c3f8b0e87cca4597bccd1f3e30d6a, type: 2}
+  - {fileID: 11400000, guid: 047c902bf00158642b831ebda664f39e, type: 2}
+  - {fileID: 11400000, guid: a186df72419def24caf2a7ffee2a52b4, type: 2}
+  - {fileID: 11400000, guid: 5a21962d1e7ce0c449d337f8e22d0a7a, type: 2}
+  - {fileID: 11400000, guid: 879f0d02f22fd5845a4cc492281722b8, type: 2}
   - {fileID: 11400000, guid: 23ab440343af00f47a847156f2605cd8, type: 2}
   - {fileID: 11400000, guid: 9aa9b23bd6002624aa6453ccfe9ad6c8, type: 2}
   - {fileID: 11400000, guid: 0ce26d63ae5cded47bd076b0463861e6, type: 2}
   - {fileID: 11400000, guid: ae1278a4d9a27ed4f953ebf9b090a14c, type: 2}
   - {fileID: 11400000, guid: 33c2990343e4520429abf4f16a911211, type: 2}
   - {fileID: 11400000, guid: 7d8e9b1af77b79448926e02334711cd8, type: 2}
+  - {fileID: 11400000, guid: 3cbd0818fddb5474c9c2c20b8f876895, type: 2}
+  - {fileID: 11400000, guid: f6d002ebd8cb2c84ca796505ec56c67a, type: 2}
+  - {fileID: 11400000, guid: 88b6d7fe40657b34fbc5b7f833cd7314, type: 2}
   - {fileID: 11400000, guid: 0583b752117becd46b495605d4ce4f19, type: 2}
   - {fileID: 11400000, guid: 38bc7b544a787ea4fa12e83f3bd9fa92, type: 2}
   - {fileID: 11400000, guid: 1b961fb0a35a7b140ba023ddb79a8c73, type: 2}
   - {fileID: 11400000, guid: 5523fdf6628ea95459d90012f280ccfe, type: 2}
   - {fileID: 11400000, guid: c11ed2883332b3444a0285e43c8d56a7, type: 2}
   - {fileID: 11400000, guid: da2a7c048ac3df64d8057e21d7989ce3, type: 2}
-  - {fileID: 11400000, guid: 3cbd0818fddb5474c9c2c20b8f876895, type: 2}
   tempItem: {fileID: 11400000, guid: 3cbd0818fddb5474c9c2c20b8f876895, type: 2}
   categories:
   - id: 0
@@ -38,5 +46,5 @@ MonoBehaviour:
     name: Plate
     selectedItemID: 0
   - id: 3
-    name: Walls
+    name: Counter
     selectedItemID: 0

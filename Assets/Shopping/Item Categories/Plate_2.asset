@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Plate_2
   m_EditorClassIdentifier: 
   id: 2
-  name: Plate
+  categoryName: Plate
   selectedItemID: 0

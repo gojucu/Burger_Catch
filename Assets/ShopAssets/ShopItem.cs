@@ -9,7 +9,7 @@ public class ShopItem : ScriptableObject
     //public int categoryID;
     public ItemCatStructs itemCategory;
     public Sprite image;
-    public string name;
+    public string itemName;
     public int price;
     public ItemConfig itemConfig;
 

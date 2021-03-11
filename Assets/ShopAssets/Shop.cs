@@ -19,14 +19,13 @@ public class Shop : MonoBehaviour
 	#endregion
 
 
-	[SerializeField] ShopItemDatabase itemDB;
+	[SerializeField] ShopItemDatabase itemDB = null;
 
-	[SerializeField] Animator NoCoinsAnim;
+	[SerializeField] Animator NoCoinsAnim = null;
  
-
-	[SerializeField] GameObject ItemTemplate;
-	[SerializeField] Transform ShopScrollView;
-	[SerializeField] GameObject ShopPanel;
+	[SerializeField] GameObject ItemTemplate = null;
+	[SerializeField] Transform ShopScrollView = null;
+	[SerializeField] GameObject ShopPanel = null;
 
 
     public void ListShopItems(int catID)
@@ -46,12 +45,9 @@ public class Shop : MonoBehaviour
 					itemDB.PurchaseItem(shopItem1.itemID, shopItem1.itemCategory.id);
 				}
 			}
-			//int purchasedCharacterIndex = SaveSystem.GetPurchasedCharacter(i);
-			//ShopItem shopItem = itemDB.items[i];
-			//itemDB.PurchaseItem(shopItem.itemID,shopItem.itemCategory.id);
 		}
 
-		ResetShopList();//Bu hala lazımmı ?*** lazım gibi
+		ResetShopList();
 		int len;
 		len = itemDB.items.Where(x => x.itemCategory.id == catID).Count();
 
@@ -160,7 +156,7 @@ public class Shop : MonoBehaviour
             }
 
             //Add purchased item to Shop Data
-			for(int i =0; i < itemDB.items.Length;i++)// Sorun burada. Bütün eşyaları satın alıyor Bir kere çalışsın!!!****
+			for(int i =0; i < itemDB.items.Length;i++)
             {
 				//ShopItem item = itemDB.GetShopItem(itemID, catID);
 				ShopItem item = itemDB.items[i];
@@ -172,7 +168,6 @@ public class Shop : MonoBehaviour
 			//change UI text: coins
 			GameMenu gameMenu = FindObjectOfType<GameMenu>();
 			gameMenu.UpdateAllCoinsUIText();
-			//Game.Instance.UpdateAllCoinsUIText(); Ana menüdeki parayı güncelliyor
 		}
         else
         {
@@ -190,8 +185,6 @@ public class Shop : MonoBehaviour
 		//Select first tab-> and call listShopItems
 		TabGroup tabGroup = FindObjectOfType<TabGroup>();
 		tabGroup.SelectDefaultTab();
-
-		//ListShopItems(0);
 	}
 
 	public void CloseShop ()
@@ -199,7 +192,6 @@ public class Shop : MonoBehaviour
 		ShopPanel.SetActive (false);
 
 		ResetShopList();
-
 	}
 
 }

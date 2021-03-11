@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Tables_0
   m_EditorClassIdentifier: 
   id: 0
-  name: Tables
+  categoryName: Tables
   selectedItemID: 0

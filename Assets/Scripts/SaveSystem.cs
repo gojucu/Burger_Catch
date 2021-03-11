@@ -15,7 +15,7 @@ public class CharactersShopData
 public class PlayerData//diğer burgerın playerData ile kesiştiği için 2 koydum sonuna
 {
     public int highScore=0;
-    public int coins = 1000;//Bu sayıyı 0 yap testler bitince buildden önce
+    public int coins = 3000;//Bu sayıyı 0 yap testler bitince buildden önce
 
     public List<int> selectedCharacterIndex = new List<int>();//Bunu Kullanmıyosun
     public ItemCategories[] itemCats = new ItemCategories[10];//Bu 10 u elinle manuel ayarlamak zorunda olabilirsin ****
@@ -33,23 +33,21 @@ public static class SaveSystem
         
         LoadPlayerData();
         LoadCharactersShopData();
-        Debug.Log("hey hey");
     }
 
     //Player Data Methods -----------------------------------------------------------------------------
-    public static int GetHighScore()//**Yeni
+    public static int GetHighScore()
     {
         return playerData.highScore;
     }
-    public static void SetHighScore(int highScore)//**Yeni
+    public static void SetHighScore(int highScore)
     {
         playerData.highScore = highScore;
         SavePlayerData();
     }
 
-    public static int GetSelectedItemIndex(int catID)//****** BU kullanman gereken
+    public static int GetSelectedItemIndex(int catID)
     {
-        //return playerData.itemCats[catID].selectedItemID;
         return playerData.itemCats[catID].selectedItemID;
 
     }
@@ -107,37 +105,6 @@ public static class SaveSystem
         stream.Close();
 
     }
-    //public static void SavePlayer(ScoreBoard scoreBoard)
-    //{
-    //    BinaryFormatter formatter = new BinaryFormatter();
-    //    string path = Application.persistentDataPath + "/player.fun";//fun bana bağlı istediğim uzantıyı girebilirim.
-    //    FileStream stream = new FileStream(path, FileMode.Create);
-
-    //    PlayerData data = new PlayerData(scoreBoard);
-
-    //    formatter.Serialize(stream, data);
-    //    stream.Close();
-    //}
-
-    //public static PlayerData LoadPlayer()
-    //{
-    //    string path = Application.persistentDataPath + "/player.fun";
-    //    if (File.Exists(path))
-    //    {
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        FileStream stream = new FileStream(path, FileMode.Open);
-
-    //        PlayerData data = formatter.Deserialize(stream) as PlayerData;
-    //        stream.Close();
-
-    //        return data;
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("Save file not found in " + path);
-    //        return null;
-    //    }
-    //}
 
     //Characters Shop Data Methods -----------------------------------------------------------------------------
     public static void AddPurchasedCharacter(int characterIndex)

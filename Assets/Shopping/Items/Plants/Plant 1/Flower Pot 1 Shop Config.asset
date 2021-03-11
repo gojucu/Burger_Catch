@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 1
   itemCategory: {fileID: 11400000, guid: 0ce73ece9b7f44e40a2333bd4b2a2dd5, type: 2}
   image: {fileID: 21300002, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
-  name: Plant_1
-  price: 450
+  itemName: Plant_1
+  price: 250
   itemConfig: {fileID: 11400000, guid: 8b08fd8b1ab717040b16af754aa31dd7, type: 2}
   isPurchased: 0

@@ -7,10 +7,8 @@ public class ShopItemDatabase : ScriptableObject
     public ShopItem[] items;
     public ShopItem tempItem;
 
-    //public SelectedItems selectedItems;
     public ItemCategories[] categories;
 
-    //Item Counts
     public int ItemsCount// Bunu kullanıcakmısın ****
     {
         get { return items.Length; }

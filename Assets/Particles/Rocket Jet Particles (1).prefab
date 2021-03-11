@@ -3618,7 +3618,7 @@ ParticleSystem:
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
+    plane0: {fileID: 6062578424619160675, guid: 3e23299d4ed3262438998bf793468830, type: 3}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
     plane3: {fileID: 0}

@@ -6,8 +6,8 @@ using UnityEngine;
 public class ItemPlacementSystem : MonoBehaviour
 {
     ItemConfig currentItemConfig = null;
-    [SerializeField] GameObject plate;
-    [SerializeField] ShopItemDatabase itemDB;
+    [SerializeField] GameObject plate = null;
+    [SerializeField] ShopItemDatabase itemDB = null;
     GameObject itemObject;
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class ItemPlacementSystem : MonoBehaviour
             {
                 if (shopItem.itemCategory.id == i && shopItem.itemID == selectedItemID && shopItem.itemConfig != null)
                 {
-                    if (shopItem.itemCategory.name != "Plate")
+                    if (shopItem.itemCategory.categoryName != "Plate")
                     {
                         currentItemConfig = shopItem.itemConfig;
 

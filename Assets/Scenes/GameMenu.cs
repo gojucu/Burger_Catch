@@ -10,8 +10,8 @@ using System.IO;
 public class GameMenu : MonoBehaviour
 {
     public TextMeshProUGUI highScore;
-    [SerializeField] TextMeshProUGUI menuCoinsUIText;
-    [SerializeField] Text shopCoinsUIText;
+    [SerializeField] TextMeshProUGUI menuCoinsUIText = null;
+    [SerializeField] Text shopCoinsUIText = null;
 
     public Sprite MusicOffSprite;
     public Sprite MusicOnSprite;

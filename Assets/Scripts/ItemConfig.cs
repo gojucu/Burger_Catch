@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemConfig : ScriptableObject
 {
     public Transform placeTransform;
-    [SerializeField] GameObject itemPrefab;
+    [SerializeField] GameObject itemPrefab = null;
 
     public GameObject GetItemPrefab()
     {

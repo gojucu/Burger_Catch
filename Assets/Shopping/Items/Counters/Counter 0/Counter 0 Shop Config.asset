@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Counter 0 Shop Config
   m_EditorClassIdentifier: 
   itemID: 0
-  itemCategory: {fileID: 0}
-  image: {fileID: 0}
-  name: 
+  itemCategory: {fileID: 11400000, guid: 4c62a76064514394e8d393daf4f0202c, type: 2}
+  image: {fileID: 21300000, guid: 46ce935b774eaf84bb7a97abc86588d5, type: 3}
+  itemName: Counter_0
   price: 0
-  itemConfig: {fileID: 0}
+  itemConfig: {fileID: 11400000, guid: b538faf7c2be1b7449a396b4d787035d, type: 2}
   isPurchased: 0
