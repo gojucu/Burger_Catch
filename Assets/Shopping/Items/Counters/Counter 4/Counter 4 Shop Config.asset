@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4
   itemCategory: {fileID: 11400000, guid: 4c62a76064514394e8d393daf4f0202c, type: 2}
-  image: {fileID: 21300000, guid: 1280d11ab2fcbde49a1ebea000b7b4aa, type: 3}
+  image: {fileID: 21300000, guid: 47396880e0749384e847c3e5fd65becc, type: 3}
   itemName: Counter_4
   price: 200
   itemConfig: {fileID: 11400000, guid: 0b3f5adbfc1c0044486a6d643e2ef18d, type: 2}

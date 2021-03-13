@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 3
   itemCategory: {fileID: 11400000, guid: 0ce73ece9b7f44e40a2333bd4b2a2dd5, type: 2}
-  image: {fileID: 21300000, guid: 475fe0d355404cd4b921d8e184a0f398, type: 3}
+  image: {fileID: 21300000, guid: 003f697f05ebe3049a429b359f60a7d5, type: 3}
   itemName: Plant_3
   price: 300
   itemConfig: {fileID: 11400000, guid: 82d671d0d3b907949ae871191b7b0ab5, type: 2}

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 2
   itemCategory: {fileID: 11400000, guid: 4c62a76064514394e8d393daf4f0202c, type: 2}
-  image: {fileID: 21300000, guid: 2a7187ff99fdee34ca0999be63ccbbf8, type: 3}
+  image: {fileID: 21300000, guid: 2782a7e9c8cf3b94aa1d27ed0a00a201, type: 3}
   itemName: Counter_2
   price: 350
   itemConfig: {fileID: 11400000, guid: 60d3922181486d843a0b038319423148, type: 2}
-  isPurchased: 0
+  isPurchased: 1

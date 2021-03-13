@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 1
   itemCategory: {fileID: 11400000, guid: 459ff91c232c9124ebf6afc8d07c1371, type: 2}
-  image: {fileID: 21300036, guid: aad717d31715b6e46a17d6fbf28455ac, type: 3}
+  image: {fileID: 21300000, guid: 8bf896bd8ce0900428e7be3aa781d306, type: 3}
   itemName: Table_1
   price: 350
   itemConfig: {fileID: 11400000, guid: 0755b3a2e1ab5f24997824b7af7e64b7, type: 2}
-  isPurchased: 0
+  isPurchased: 1

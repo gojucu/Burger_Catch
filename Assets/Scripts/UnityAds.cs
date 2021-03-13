@@ -9,6 +9,7 @@ public class UnityAds : MonoBehaviour, IUnityAdsListener
     bool TestMode = true;
 
     string mySurfacingId = "Rewarded_Android";
+    [SerializeField] ScoreBoard scoreBoard=null;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class UnityAds : MonoBehaviour, IUnityAdsListener
         if (showResult == ShowResult.Finished)
         {
             // Reward the user for watching the ad to completion.
+            SaveSystem.AddCoins(scoreBoard.GetScore());
         }
         else if (showResult == ShowResult.Skipped)
         {
