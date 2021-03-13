@@ -18,4 +18,4 @@ MonoBehaviour:
   itemName: Plant_1
   price: 250
   itemConfig: {fileID: 11400000, guid: 8b08fd8b1ab717040b16af754aa31dd7, type: 2}
-  isPurchased: 1
+  isPurchased: 0

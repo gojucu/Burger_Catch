@@ -18,4 +18,4 @@ MonoBehaviour:
   itemName: Plate_1
   price: 500
   itemConfig: {fileID: 11400000, guid: 1291e45a5fc8ea149aa226d1c9028056, type: 2}
-  isPurchased: 1
+  isPurchased: 0

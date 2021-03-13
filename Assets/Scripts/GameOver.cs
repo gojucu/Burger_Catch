@@ -23,8 +23,8 @@ public class GameOver : MonoBehaviour
         health3.gameObject.SetActive(true);
     }
 
-    void Update()
-    {
+    void Update()//bunu düzeltmeye gerek var mı ? Değiştimi diye bir bool değer atıp  can azalırsa bu bool değer true
+    {  //olur.  true ise devam et diyip işlemi yaptıktan sonra bool false çevrilir.
         if (health > 3)
             health = 3;
         if (isDead == true)

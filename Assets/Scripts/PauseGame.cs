@@ -28,26 +28,16 @@ public class PauseGame : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.Play("CountDownAnim2");//Oyun ilk açılırkenki geri sayım.
         StartCoroutine(ActivateGameUI());//Butonun animasyonu beklemesi için gereken fonksiyon
+
+        SetSprites();
     }
-    void Update()
+
+    private void SetSprites()
     {
-        if (PlayerPrefs.GetInt("music", 1) == 1)
-        {
-            musicImg.sprite = MusicOnSprite;
-        }
-        else
-        {
-            musicImg.sprite = MusicOffSprite;
-        }
-        if (PlayerPrefs.GetInt("sounds", 1) == 1)
-        {
-            audioImg.sprite = SoundOnSprite;
-        }
-        else
-        {
-            audioImg.sprite = SoundOffSprite;
-        }
+        musicImg.sprite = PlayerPrefs.GetInt("music", 1) == 1 ? MusicOnSprite : MusicOffSprite;
+        audioImg.sprite = PlayerPrefs.GetInt("sounds", 1) == 1 ? SoundOnSprite : SoundOffSprite;
     }
+
 
     IEnumerator ActivateGameUI()
     {

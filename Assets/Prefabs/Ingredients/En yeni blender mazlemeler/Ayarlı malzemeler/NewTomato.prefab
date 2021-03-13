@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 0.15
-  fallRange: 20
+  fallRange: 22
   fallAngle: -25
   IngredientId: 9
   isOnPlate: 0

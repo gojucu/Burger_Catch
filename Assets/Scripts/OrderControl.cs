@@ -55,14 +55,6 @@ public class OrderControl : MonoBehaviour
             FinishOrder();
             NewOrder();
         }
-
-        if (PlayerPrefs.GetInt("sounds", 1) == 0)
-        {
-            audioSource.mute = true;
-        }else if(PlayerPrefs.GetInt("sounds", 1) == 1)
-        {
-            audioSource.mute = false;
-        }
     }
 
     IEnumerator WaitforCountdown()
@@ -183,7 +175,10 @@ public class OrderControl : MonoBehaviour
         plateFoodCount++;//tabaktaki yemek sayisini arttir
 
         audioSource.Stop();
-        audioSource.PlayOneShot(correctIngredient);
+        if (PlayerPrefs.GetInt("sounds", 1) == 1)
+        {
+            audioSource.PlayOneShot(correctIngredient);
+        }
 
         NewPlateColliderPosition(plateHeight); // Tabagin yeni collider y pozisyonu
         NewForbiddenColliderSize(plateHeight); //Forbidden colliderin yeni boyutunu ayarla
@@ -247,7 +242,10 @@ public class OrderControl : MonoBehaviour
 
         ingControl.DestroyIngredient();//Düşen malzemeyi yok et
         audioSource.Stop();
-        audioSource.PlayOneShot(mistake);
+        if (PlayerPrefs.GetInt("sounds", 1) == 1)
+        {
+            audioSource.PlayOneShot(mistake);
+        }
         GameOver.health -= 1; // Canı 1 Azalt
     }
 

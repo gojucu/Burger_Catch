@@ -11,7 +11,7 @@ public class UnityAds : MonoBehaviour, IUnityAdsListener
     string mySurfacingId = "Rewarded_Android";
     [SerializeField] ScoreBoard scoreBoard=null;
     // Start is called before the first frame update
-    void Start()
+    void Start()//Bunu Gameoverdan sonra yapabilirsin*****
     {
         Advertisement.Initialize(GooglePlay_ID, TestMode);
 

@@ -28,7 +28,16 @@ public class GameMenu : MonoBehaviour
         Time.timeScale = 1;
         GetHighscore();
         UpdateAllCoinsUIText();
+
+        SetSprites();
     }
+
+    private void SetSprites()
+    {
+        musicBtnImg.sprite = PlayerPrefs.GetInt("music", 1) == 1 ? MusicOnSprite : MusicOffSprite;
+        soundBtnImg.sprite = PlayerPrefs.GetInt("sounds", 1) == 1 ? SoundOnSprite : SoundOffSprite;
+    }
+
     public void UpdateAllCoinsUIText()//bütün coin textlerini değiştiriyor
     {
         int deneme = SaveSystem.GetCoins();//**** Yeni
@@ -53,26 +62,7 @@ public class GameMenu : MonoBehaviour
             File.Delete(path2);
         }
     }
-    void Update()
-    {
-        if (PlayerPrefs.GetInt("music", 1) == 1)
-        {
-            musicBtnImg.sprite = MusicOnSprite;
-        }
-        else
-        {
-            musicBtnImg.sprite = MusicOffSprite;
-        }
-        if (PlayerPrefs.GetInt("sounds", 1) == 1)
-        {
-            soundBtnImg.sprite = SoundOnSprite;
-        }
-        else
-        {
-            soundBtnImg.sprite = SoundOffSprite;
-        }
 
-    }
     public void MuteButton()
     {
         music.MuteMusic();
