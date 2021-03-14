@@ -15,7 +15,7 @@ public class CharactersShopData
 public class PlayerData//diğer burgerın playerData ile kesiştiği için 2 koydum sonuna
 {
     public int highScore=0;
-    public int coins = 3000;//Bu sayıyı 0 yap testler bitince buildden önce
+    public int coins = 0;//Bu sayıyı 0 yap testler bitince buildden önce
 
     public List<int> selectedCharacterIndex = new List<int>();//Bunu Kullanmıyosun
     public ItemCategories[] itemCats = new ItemCategories[10];//Bu 10 u elinle manuel ayarlamak zorunda olabilirsin ****

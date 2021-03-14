@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.UI;
 
 public class UnityAds : MonoBehaviour, IUnityAdsListener
 {
@@ -9,7 +10,8 @@ public class UnityAds : MonoBehaviour, IUnityAdsListener
     bool TestMode = true;
 
     string mySurfacingId = "Rewarded_Android";
-    [SerializeField] ScoreBoard scoreBoard=null;
+    [SerializeField] ScoreBoard scoreBoard = null;
+    [SerializeField] Button gameOverAdButon = null;
     // Start is called before the first frame update
     void Start()//Bunu Gameoverdan sonra yapabilirsin*****
     {
@@ -44,7 +46,8 @@ public class UnityAds : MonoBehaviour, IUnityAdsListener
         if (showResult == ShowResult.Finished)
         {
             // Reward the user for watching the ad to completion.
-            SaveSystem.AddCoins(scoreBoard.GetScore());
+            SaveSystem.AddCoins(scoreBoard.GetScore()+25);
+            gameOverAdButon.interactable = false;
         }
         else if (showResult == ShowResult.Skipped)
         {
